@@ -5,7 +5,7 @@
 aTEA (active TE annotation) is an analysis pipeline to identify active TE transcripts (including both autonomously expressed TE and TE-gene chimeric transcripts) from long-read RNA-seq data (e.g., PacBio Iso-seq or ONT cDNA-RNA sequencing). 
 
 ## Prerequisite
-# Software
+### Software
 Linux system
 
 python 3.8.17 or latest
@@ -24,15 +24,15 @@ CD-HIT (v4.8.1) (https://github.com/weizhongli/cdhit)
 
 gffread (v0.12.7) (https://github.com/gpertea/gffread)
 
-# Genomic data
+### Genomic data
 
-Reference genome: GRCz11.fa (https://ftp.ensembl.org/pub/release-103/fasta/danio_rerio/dna/)
+Reference genome: `GRCz11.fa` (https://ftp.ensembl.org/pub/release-103/fasta/danio_rerio/dna/)
 
-Gene annotation: Danio_rerio.GRCz11.103.chr.gtf (https://ftp.ensembl.org/pub/release-103/gtf/danio_rerio/)
+Gene annotation: `Danio_rerio.GRCz11.103.chr.gtf` (https://ftp.ensembl.org/pub/release-103/gtf/danio_rerio/)
 
-TE annotation: GRCz11.TE.fa.out (https://figshare.com/articles/dataset/zebrafish_TE_annotation_RepeatMasker_/24991395)
+TE annotation: `GRCz11.TE.fa.out` (https://figshare.com/articles/dataset/zebrafish_TE_annotation_RepeatMasker_/24991395)
 
-BED12: GRCz11.bed12 `paftools.js gff2bed  Danio_rerio.GRCz11.103.chr.gtf > GRCz11.bed12`
+BED12: `GRCz11.bed12` which can be obtained by using this command `paftools.js gff2bed  Danio_rerio.GRCz11.103.chr.gtf > GRCz11.bed12`
 
 ## Install and Run
 
@@ -60,8 +60,9 @@ We provide a demo data for testing, which is a CCS bam file containing 20,000 CC
 
 ## For Your Data
 1. generate CCS reads from subreads bam: `ccs your.subreads.bam your.ccs.bam`
-2. replace the name of demo file with your data: In aTEA.sh, replace the **demo** with **your**. If you have multiple samples/replicates to run, simply list all name in the loop, e.g., `sample1 sample2 sample3 ..`.
-3. prepare config file for TALON: replace the path for the labeled SAM file in the file **config_file_demo**, e.g., `/your/home/workdir/labeled/your_sample_labeled.sam`.
-4. run `bash aTEA.sh` or submit the job to a computing cluster.
+2. prepare genomic data for your own species, including Genome sequence, Gene annotation, TE annotation, etc.
+3. replace the name of demo file with your data: In aTEA.sh, replace the **demo** with **your**. If you have multiple samples/replicates to run, simply list all name in the loop, e.g., `sample1 sample2 sample3 ..`.
+4. prepare config file for TALON: replace the path for the labeled SAM file in the file **config_file_demo**, e.g., `/your/home/workdir/labeled/your_sample_labeled.sam`.
+5. run `bash aTEA.sh` or submit the job to a computing cluster.
 
 
