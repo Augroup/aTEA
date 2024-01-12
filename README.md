@@ -5,7 +5,7 @@
 aTEA (active TE annotation) is an analysis pipeline to identify active TE transcripts (including both autonomously expressed TE and TE-gene chimeric transcripts) from long-read RNA-seq data (e.g., PacBio Iso-seq or ONT cDNA-RNA sequencing). 
 
 ## Prerequisite
-
+# Software
 Linux system
 
 python 3.8.17 or latest
@@ -24,11 +24,22 @@ CD-HIT (v4.8.1) (https://github.com/weizhongli/cdhit)
 
 gffread (v0.12.7) (https://github.com/gpertea/gffread)
 
+# Genomic data
+
+Reference genome: GRCz11.fa (https://ftp.ensembl.org/pub/release-103/fasta/danio_rerio/dna/)
+
+Gene annotation: Danio_rerio.GRCz11.103.chr.gtf (https://ftp.ensembl.org/pub/release-103/gtf/danio_rerio/)
+
+TE annotation: GRCz11.TE.fa.out (https://figshare.com/articles/dataset/zebrafish_TE_annotation_RepeatMasker_/24991395)
+
+BED12: GRCz11.bed12 `paftools.js gff2bed  Danio_rerio.GRCz11.103.chr.gtf > GRCz11.bed12`
+
 ## Install and Run
 
-1. Download the package to your local server
+1. Download the package `aTEA-0.1.tar.gz` to your local server
 2. Unpack it using the command `tar -zxvf aTEA-0.1.tar.gz`
-3. Run `bash aTEA.sh`
+3. Put all required genomic data into the same folder
+4. Run `bash aTEA.sh`
 
 ## Demo
 We provide a demo data for testing, which is a CCS bam file containing 20,000 CCS reads. You can expect to get transcript identification results and TE classification results from this demo analysis. In addition, all relevant genomic data for analysis are also included. This demo run should be finished in 10 mins on a standard Linux computer with 10 cores.
