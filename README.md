@@ -31,7 +31,7 @@ gffread (v0.12.7) (https://github.com/gpertea/gffread)
 3. Run `bash aTEA.sh`
 
 ## Demo
-We provide a demo data for testing, which is a CCS bam file containing 20,000 CCS reads. You can expect to get transcript identification results and TE classification results from this demo analysis. In addition, all relevant genomic data for analysis are also included. This demo run should be finished in 10 mins on a standard Linux computer with single core.
+We provide a demo data for testing, which is a CCS bam file containing 20,000 CCS reads. You can expect to get transcript identification results and TE classification results from this demo analysis. In addition, all relevant genomic data for analysis are also included. This demo run should be finished in 10 mins on a standard Linux computer with 10 cores.
 
 ### input
 1. CCS bam file: `demo.ccs.bam`
