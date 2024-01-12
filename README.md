@@ -31,6 +31,7 @@ gffread (v0.12.7) (https://github.com/gpertea/gffread)
 3. Run `bash aTEA.sh`
 
 ## Demo
+We provide a demo data for testing, which is a CCS bam file containing 20,000 CCS reads. You can expect to get transcript identification results and TE classification results from this demo analysis. In addition, all relevant genomic data for analysis are also included. This demo run should be finished in 10 mins on a standard Linux computer with single core.
 
 ### input
 1. CCS bam file: `demo.ccs.bam`
@@ -42,9 +43,9 @@ gffread (v0.12.7) (https://github.com/gpertea/gffread)
 7. TALON config file: `config_file_demo`
 
 ### output
-1. transcript identification: `final_talon.gtf` and `final_talon.transcripts.fa`
-2. transcript quantification: `*.combined.filterlow`
-3. transcript classification: `Demo.TE.annotation.list2`; `Demo.TE-Gene.annotation.list2` and `Demo.Gene.annotation.list2`
+1. transcript identification: `final_talon.gtf` (transcript identification results in gtf format) and `final_talon.transcripts.fa` (sequences file)
+2. transcript quantification: `*.combined.filterlow` (reads count, TPM for each transcript)
+3. transcript classification: `Demo.TE.annotation.list2` (TE-alone transcript with TE annotation); `Demo.TE-Gene.annotation.list2` (TE-gene transcript with TE annotation) and `Demo.Gene.annotation.list2` (TE-free gene transcripts)
 
 ## For Your Data
 1. Generate CCS reads from subreads bam: `ccs your.subreads.bam your.ccs.bam`
