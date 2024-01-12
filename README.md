@@ -47,6 +47,9 @@ gffread (v0.12.7) (https://github.com/gpertea/gffread)
 3. transcript classification: `Demo.TE.annotation.list2`; `Demo.TE-Gene.annotation.list2` and `Demo.Gene.annotation.list2`
 
 ## For Your Data
-
+1. Generate CCS reads from subreads bam: `ccs your.subreads.bam your.ccs.bam`
+2. Replace the name of demo file with your data: In aTEA.sh, replace the **demo** with **your**. If you have multiple samples/replicates to run, simply list all name in the loop, e.g., `sample1 sample2 sample3 ..`.
+3. Prepare config file for TALON: replace the path for the labeled SAM file in the file **config_file_demo**, e.g., `/your/home/workdir/labeled/your_sample_labeled.sam`.
+4. run `bash aTEA.sh` or submit the job to a computing cluster.
 
 
