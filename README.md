@@ -35,11 +35,13 @@ TE annotation: `GRCz11.TE.fa.out` (https://figshare.com/articles/dataset/zebrafi
 BED12: `GRCz11.bed12` which can be obtained by using this command `paftools.js gff2bed  Danio_rerio.GRCz11.103.chr.gtf > GRCz11.bed12`
 
 ## Install and Run
+This tool is not required to install on your local computer. To run it, 
 
 1. Download the package `aTEA-0.1.tar.gz` to your local server
 2. Unpack it using the command `tar -zxvf aTEA-0.1.tar.gz`
 3. Put all required genomic data into the same folder
-4. Run `bash aTEA.sh`
+4. Make sure the required tools to be added into your PATH
+5. Run `bash aTEA.sh`
 
 ## Demo
 We provide a demo data for testing, which is a CCS bam file containing 20,000 CCS reads. You can expect to get transcript identification results and TE classification results from this demo analysis. In addition, all relevant genomic data for analysis are also included. This demo run should be finished in 10 mins on a standard Linux computer with 10 cores.
