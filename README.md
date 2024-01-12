@@ -12,7 +12,7 @@ python 3.8.17 or latest
 
 Perl 5.32
 
-Isoseq https://github.com/pacificbiosciences/isoseq/
+Isoseq (https://github.com/pacificbiosciences/isoseq/)
 
 BamTools (v2.5.1) (https://github.com/pezmaster31/bamtools)
 
@@ -48,9 +48,9 @@ We provide a demo data for testing, which is a CCS bam file containing 20,000 CC
 3. transcript classification: `Demo.TE.annotation.list2` (TE-alone transcript with TE annotation); `Demo.TE-Gene.annotation.list2` (TE-gene transcript with TE annotation) and `Demo.Gene.annotation.list2` (TE-free gene transcripts)
 
 ## For Your Data
-1. Generate CCS reads from subreads bam: `ccs your.subreads.bam your.ccs.bam`
-2. Replace the name of demo file with your data: In aTEA.sh, replace the **demo** with **your**. If you have multiple samples/replicates to run, simply list all name in the loop, e.g., `sample1 sample2 sample3 ..`.
-3. Prepare config file for TALON: replace the path for the labeled SAM file in the file **config_file_demo**, e.g., `/your/home/workdir/labeled/your_sample_labeled.sam`.
+1. generate CCS reads from subreads bam: `ccs your.subreads.bam your.ccs.bam`
+2. replace the name of demo file with your data: In aTEA.sh, replace the **demo** with **your**. If you have multiple samples/replicates to run, simply list all name in the loop, e.g., `sample1 sample2 sample3 ..`.
+3. prepare config file for TALON: replace the path for the labeled SAM file in the file **config_file_demo**, e.g., `/your/home/workdir/labeled/your_sample_labeled.sam`.
 4. run `bash aTEA.sh` or submit the job to a computing cluster.
 
 
