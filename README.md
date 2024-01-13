@@ -8,7 +8,7 @@ aTEA (active TE annotation) is an analysis pipeline to identify active TE transc
 ### Software
 Linux system
 
-python 3.8.17 or latest
+Python 3.8.17 or latest
 
 Perl 5.32
 
